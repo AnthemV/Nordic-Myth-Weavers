@@ -1,5 +1,5 @@
 # Nordic-Myth-Weavers
-A userstyle for Mythweavers character sheets.
+A userstyle for Mythweavers character sheets, based on the Nord color palette.
 
 ## Character Sheet Nord Theme 
 <p align="left">
