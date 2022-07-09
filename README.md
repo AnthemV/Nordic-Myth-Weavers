@@ -1,4 +1,4 @@
-# Nordic-Mythweavers
+# Nordic-Myth-Weavers
 A userstyle for Mythweavers character sheets.
 
 ## Character Sheet Nord Theme 
