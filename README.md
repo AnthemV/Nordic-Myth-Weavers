@@ -1,12 +1,14 @@
 # Nordic-Mythweavers
 A userstyle for Mythweavers character sheets.
 
-<p align="left">
 ## Nord Theme 
+<p align="left">
   <a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/github.com/AnthemV/Nordic-Mythweavers/main/Nordic-Mythweavers-Sheets.user.styl">
     <img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat"/>
   </a>
+ </p>
 ## Spacing Fixes
+<p align="left">
   <a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/github.com/AnthemV/Nordic-Mythweavers/main/Myth-Weavers-Pathfinder-Experimental-Fixes.user.styl">
     <img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat"/>
   </a>
