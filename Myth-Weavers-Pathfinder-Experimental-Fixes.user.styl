@@ -4,78 +4,300 @@
 @homepageURL    https://github.com/AnthemV/Nordic-Myth-Weavers
 @supportURL     https://github.com/AnthemV/Nordic-Myth-Weavers/issues
 @updateURL      https://github.com/AnthemV/Nordic-Myth-Weavers/raw/main/Myth-Weavers-Pathfinder-Experimental-Fixes.user.styl
-@version        1.1.4
+@version        1.2.0
 @description    Spacing fixes for Myth-Weavers's experimental Pathfinder character sheet.
 @author         Ian Crawford
 @license        MIT
 ==/UserStyle== */
 
+
 @-moz-document domain("myth-weavers.com") {
 
- input[placeholder="weapon name"]{
-  margin-bottom: 3px;
-}
- input[placeholder="total attack bonus"]{
-  margin-bottom: 3px;
-}
- input[placeholder="crit"]{
-  margin-bottom: 3px;
-}
-input[placeholder="type"]{
-  width: 24px;
-}
-    
- a#fillSkills.btn.btn-primary{
-  margin-bottom: 9px
-}
- a#clearSkills.btn.btn-danger{
-  margin-bottom: 9px
-}
-  h1 {
-  margin-top: 7px
-}
-    
+    /* FIXES JANKY WEAPONS AREA */
+    input[placeholder="weapon name"] {
+        margin-bottom: 3px;
+    }
+    input[placeholder="total attack bonus"] {
+        margin-bottom: 3px;
+    }
+    input[placeholder="crit"] {
+        margin-bottom: 3px;
+    }
+    input[placeholder="type"] {
+        width: 24px;
+    }
+
+
+    /* SKILLS BUTTON PLACEMENTS */
+    a#fillSkills.btn.btn-primary {
+        margin-bottom: 9px
+    }
+    a#clearSkills.btn.btn-danger {
+        margin-bottom: 9px
+    }
+
+    /* HEADER SPACING */
+    h1 {
+        margin-top: 7px
+    }
+
+
+    /* PLEACEHOLDER HEADERS IN CHARACTER DETAILS SECTION */
     #character_txt input[type="text"] {
-  font-size: 16px;
-}
+        font-size: 16px;
+    }
 
-/* CHECKBOXES */
-input[name="caster"]{
-   margin-top: 0px;
-   margin-bottom: 3px;
-}
 
-  input.skill_prof {
+    /* CHECKBOXES */
+    input[name="caster"] {
+        margin-top: 0px;
+        margin-bottom: 3px;
+        margin-right: 3px;
+    }
+
+    input.skill_prof {
         margin-bottom: 3px
     }
+
+    .character .control-group[class="span2 control-group"] {
+        width: 141px;
+    }
     
+    div#armor.span12 input.input-nano[name="protect_2_worn"],
+    div#armor.span12 input.input-nano[name="protect_4_worn"] {
+        margin-left: 6px;
+        margin-bottom: 3px;
+    }
+    
+    div#armor.span12 input.input-nano[name="protect_1_worn"],
+    div#armor.span12 input.input-nano[name="protect_3_worn"] {
+        margin-left: 6px;
+        margin-bottom: 4px;
+    }
 
 
-/* CAMPAIGN AND EXP LINE LENGTH */
-.character [name="campaign"] {
-    width: 213px;
+    /* CAMPAIGN AND EXP LINE LENGTH */
+    .character [name="campaign"] {
+        width: 213px;
+    }
+
+    .character [name="experience"] {
+        width: 53px;
+    }
+
+
+    /* ADJUST HEIGHTS OF BOTTOM TEXT FIELDS */
+    #character_statblock textarea,
+    #character_other_notes textarea,
+    #character_private_notes textarea {
+        height: 141px;
+    }
+
+
+    /* NUDGE THE AC AND HEALTH TEXT TO THE LEFT */
+    #hp label {
+        padding-right: 4px;
+    }
+
+    #ac_total label {
+        padding-right: 6px;
+    }
+
+
+    /* FIXES BUTTON IN CLASS AND LEVELS WORKSPACE */
+    button.btn.btn-mini.btn-primary.addrow {
+        padding-right: 7px;
+        padding-left: 7px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin-left: 11px;
+    }
+
+
+    /* CENTERED TABLE FOR SPELLCASTING */
+    table.span12 {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    /* HEADING SPACER FOR SPELLCASTING SECTION */
+    h1.span12 {
+        margin-top: 20px;
+        margin-bottom: 7px;
+    }
+
+
+    /* MOVE MOMEMENT AND OTHER LABELS TO THE LEFT TO PREVENT THEM FROM TOUCHING THEIR RESPECTIVE BOXES */
+    #movement .control-label {
+        margin-right: 10px !important;
+        margin-left: -10px !important;
+    }
+
+    #ac_alt .control-label {
+        margin-right: 4px !important;
+        margin-left: -4px !important;
+    }
+
+
+    /* CURSER SHOULD NO LONGER SHOW RANDOM TEXT SEGMENTS AS CLICKABLE */
+    label,
+    select {
+        cursor: text !important;
+    }
+
+
+    /* XP SPEED BOX LENGTH NOW MATCHES THAT OF OTHERS */
+    [name="xp_speed"] {
+        margin-left: -7px;
+        width: 54px !important;
+    }
+
+    span12.th {
+        padding-right: 23px !important;
+    }
+
+
+    /* SPACING FIX TO CENTER EACH INDIVIDUAL SPELL BOX */
+    [name="spell_lvl_0_known"],
+    [name="spell_lvl_1_known"],
+    [name="spell_lvl_2_known"],
+    [name="spell_lvl_3_known"],
+    [name="spell_lvl_4_known"],
+    [name="spell_lvl_5_known"],
+    [name="spell_lvl_6_known"],
+    [name="spell_lvl_7_known"],
+    [name="spell_lvl_8_known"],
+    [name="spell_lvl_9_known"],
+    [name="spell_lvl_0_bonus_spells"],
+    [name="spell_lvl_1_bonus_spells"],
+    [name="spell_lvl_2_bonus_spells"],
+    [name="spell_lvl_3_bonus_spells"],
+    [name="spell_lvl_4_bonus_spells"],
+    [name="spell_lvl_5_bonus_spells"],
+    [name="spell_lvl_6_bonus_spells"],
+    [name="spell_lvl_7_bonus_spells"],
+    [name="spell_lvl_8_bonus_spells"],
+    [name="spell_lvl_9_bonus_spells"],
+    [name="spell_lvl_0_spells_per_day"],
+    [name="spell_lvl_1_spells_per_day"],
+    [name="spell_lvl_2_spells_per_day"],
+    [name="spell_lvl_3_spells_per_day"],
+    [name="spell_lvl_4_spells_per_day"],
+    [name="spell_lvl_5_spells_per_day"],
+    [name="spell_lvl_6_spells_per_day"],
+    [name="spell_lvl_7_spells_per_day"],
+    [name="spell_lvl_8_spells_per_day"],
+    [name="spell_lvl_9_spells_per_day"],
+    [name="spell_lvl_0_save_dc"],
+    [name="spell_lvl_1_save_dc"],
+    [name="spell_lvl_2_save_dc"],
+    [name="spell_lvl_3_save_dc"],
+    [name="spell_lvl_4_save_dc"],
+    [name="spell_lvl_5_save_dc"],
+    [name="spell_lvl_6_save_dc"],
+    [name="spell_lvl_7_save_dc"],
+    [name="spell_lvl_8_save_dc"],
+    [name="spell_lvl_9_save_dc"] {
+        margin-left: 12px !important;
+    }
+
+
+    /* MOVE SKILL BUTTONS TO THE RIGHT SIDE OF THE COLUMN */
+    a#fillSkills.btn.btn-primary {
+        margin-left: 227px;
+    }
+
+
+    /* MAKE THE SIZE DROPDOWN BOX FIT IN WITH THE REST OF THE ELEMENTS ACROSS THE TOP OF THE SHEET */
+    select.span2 {
+        width: 131px;
+        height: 22px;
+        margin-top: -4px;
+        cursor: pointer !important;
+    }
+
+    /* REMOVE FOCUS INDICATOR FROM SIZE DROPDOWN BOX */
+    select:focus,
+    input[type="file"]:focus,
+    input[type="radio"]:focus,
+    input[type="checkbox"]:focus {
+        outline: thin dotted #3330;
+        outline-offset: -2px;
+    }
+
+    /* FIXES THE SPACING OF AGE, HEIGHT, WIEGHT, ETC. */
+    div#character_page.page [class="control-group"] {
+        margin-left: -12px;
+    }
+
+    div#character_page.page div.controls {
+        margin-left: 0px !important;
+    }
+
+    [name="hair_color"] {
+        width: 190px;
+    }
+
+    [name="eyes_color"] {
+        width: 190px;
+    }
+
+    [name="skin_color"] {
+        width: 190px;
+    }
+
+    [name="weight"] {
+        width: 64px;
+    }
+
+    [name="height"] {
+        width: 64px;
+    }
+
+    [name="age"] {
+        width: 64px;
+    }
+
+    [name="gender"] {
+        width: 64px;
+    }
+
+
+    /* CHARACTER LANGUAGES SECTION SPACING FIXES */
+    div#character_languages.span6 div.span2 {
+        width: 139px !important;
+    }
+
+    div#character_languages.span6 {
+        margin-left: 21px;
+        width: 459px;
+    }
+
+    div#character_languages.span6 h1 {
+        margin-top: -4px;
+        margin-bottom: 8px;
+    }
+
+    /* CHARACTER DESCRIPTION AND OTHER LARGE TEXT BOTTOM AREAS SPACING FIX */
+    div#character_txt.row input.span6,
+    div#character_txt.row textarea.span6 {
+        width: 438px;
+    }
+    
+    [name="__txt_character_2_name"],
+    [name="__txt_character_2"],
+    [name="__txt_character_4_name"],
+    [name="__txt_character_4"] {
+        margin-left: 1px !important;
+        width: 442px !important;
+    }
+    
+    
+        
+        
+        
+        
+        
+        
 }
-
-.character [name="experience"] {
-    width: 53px;
-}
-
-/* ADJUST HEIGHTS OF BOTTOM TEXT FIELDS */ 
-#character_statblock textarea, #character_other_notes textarea, #character_private_notes textarea {
-  height: 141px;
-}
-
-/* NUDGE THE AC AND HEALTH TEXT TO THE LEFT */
-#hp label {
-   padding-right: 3px;
-}
-
-#ac_total label {
-   padding-right: 4px;
-}
-   
-
-}
-
-
-
