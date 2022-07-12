@@ -4,7 +4,7 @@
 @homepageURL    https://github.com/AnthemV/Nordic-Myth-Weavers
 @supportURL     https://github.com/AnthemV/Nordic-Myth-Weavers/issues
 @updateURL      https://github.com/AnthemV/Nordic-Myth-Weavers/raw/main/Nordic-Myth-Weavers-Sheets.user.styl
-@version        1.4.2
+@version        1.5.0
 @description    An alternate color palate for Myth-Weavers character sheets, based on the Nord color palette.
 @author         Ian Crawford
 @license        MIT
@@ -13,20 +13,33 @@
 
 @-moz-document domain("www.myth-weavers.com") {
 
-/* BACKGROUND AND SITE FONT */
+    /* ---- BACKGROUND AND SITE FONT ---- */
     body {
         padding-top: 100px;
         background-color: #2e3440;
         font-family: rubik !important;
         color: #2e3440;
     }
-    
-/* BOLD FONT WEIGHT */
-    label, input, button, select, textarea {
-         font-weight: 500 !important;
+
+    /* ---- BOLD FONT WEIGHT ---- */
+    label,
+    input,
+    button,
+    select,
+    textarea {
+        font-weight: 500 !important;
     }
-  
-    
+
+    th {
+        font-weight: 500 !important;
+    }
+    /* Correct for AC & Others not being bolded */
+        input.span1.tallbox {
+        font-size: 18px;
+        font-weight: 400 !important;
+    }
+
+
     table#abilities tbody th,
     table.saves tbody th,
     table#init tbody th,
@@ -102,10 +115,7 @@
 
         margin-top: 5px;
     }
-    .btn:first-child {
 
-        *margin-left: 0;
-    }
     button.btn,
     input[type="submit"].btn {
 
@@ -259,7 +269,8 @@
         padding: 0px 10px;
     }
 
-    .btn:first-child {
+    /* ADDS GAP TO THE SIDE OF THE SAVE BUTTON */
+    button.sheetsave.btn.btn-primary {
         margin-left: 12px;
     }
 
@@ -377,5 +388,11 @@
         border-radius: 16px 16px 0 0;
     }
 
- 
+    /* ROUNDS THE EDGES OF CHARACTER PORTRAIT */
+    #character_portrait {
+        height: 164px;
+        width: 126px;
+        border: 1px solid #999;
+        border-radius: 16px;
+    }
 }
