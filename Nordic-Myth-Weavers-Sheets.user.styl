@@ -12,11 +12,21 @@
 
 
 @-moz-document domain("www.myth-weavers.com") {
+
+/* BACKGROUND AND SITE FONT */
     body {
         padding-top: 100px;
         background-color: #2e3440;
         font-family: rubik;
+        color: #2e3440;
     }
+    
+/* BOLD FONT WEIGHT */
+    label, input, button, select, textarea {
+         font-weight: 500;
+    }
+  
+    
     table#abilities tbody th,
     table.saves tbody th,
     table#init tbody th,
@@ -274,10 +284,6 @@
         border-radius: 7px;
     }
 
-    body {
-        color: #2e3440;
-    }
-
     .page input.unsaved,
     .page textarea.unsaved,
     .page td.unsaved,
@@ -371,8 +377,5 @@
         border-radius: 16px 16px 0 0;
     }
 
-    /* ALLOWS FOR TABLE SPACING FIXES IN THE PATHFINDER SPECIFIC CSS */
-    table {
-        background-color: #f6f7f9;
-    }
+ 
 }
