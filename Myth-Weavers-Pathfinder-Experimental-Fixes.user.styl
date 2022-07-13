@@ -4,7 +4,7 @@
 @homepageURL    https://github.com/AnthemV/Nordic-Myth-Weavers
 @supportURL     https://github.com/AnthemV/Nordic-Myth-Weavers/issues
 @updateURL      https://github.com/AnthemV/Nordic-Myth-Weavers/raw/main/Myth-Weavers-Pathfinder-Experimental-Fixes.user.styl
-@version        1.2.0
+@version        1.3.0
 @description    Spacing fixes for Myth-Weavers's experimental Pathfinder character sheet.
 @author         Ian Crawford
 @license        MIT
@@ -13,291 +13,554 @@
 
 @-moz-document domain("myth-weavers.com") {
 
-    /* FIXES JANKY WEAPONS AREA */
-    input[placeholder="weapon name"] {
-        margin-bottom: 3px;
-    }
-    input[placeholder="total attack bonus"] {
-        margin-bottom: 3px;
-    }
-    input[placeholder="crit"] {
-        margin-bottom: 3px;
-    }
-    input[placeholder="type"] {
-        width: 24px;
-    }
-
-
-    /* SKILLS BUTTON PLACEMENTS */
-    a#fillSkills.btn.btn-primary {
-        margin-bottom: 9px
-    }
-    a#clearSkills.btn.btn-danger {
-        margin-bottom: 9px
-    }
-
     /* HEADER SPACING */
     h1 {
-        margin-top: 7px
-    }
+        margin-top: 7px;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    text-overflow: fade !important;
+    overflow: visible;
+    white-space: nowrap;
+}
 
 
-    /* PLEACEHOLDER HEADERS IN CHARACTER DETAILS SECTION */
-    #character_txt input[type="text"] {
-        font-size: 16px;
-    }
 
 
-    /* CHECKBOXES */
-    input[name="caster"] {
-        margin-top: 0px;
-        margin-bottom: 3px;
-        margin-right: 3px;
-    }
-
-    input.skill_prof {
-        margin-bottom: 3px
-    }
-
-    .character .control-group[class="span2 control-group"] {
-        width: 141px;
-    }
-    
-    div#armor.span12 input.input-nano[name="protect_2_worn"],
-    div#armor.span12 input.input-nano[name="protect_4_worn"] {
-        margin-left: 6px;
-        margin-bottom: 3px;
-    }
-    
-    div#armor.span12 input.input-nano[name="protect_1_worn"],
-    div#armor.span12 input.input-nano[name="protect_3_worn"] {
-        margin-left: 6px;
-        margin-bottom: 4px;
-    }
 
 
-    /* CAMPAIGN AND EXP LINE LENGTH */
-    .character [name="campaign"] {
-        width: 213px;
-    }
-
-    .character [name="experience"] {
-        width: 53px;
-    }
 
 
-    /* ADJUST HEIGHTS OF BOTTOM TEXT FIELDS */
-    #character_statblock textarea,
-    #character_other_notes textarea,
-    #character_private_notes textarea {
-        height: 141px;
-    }
 
 
-    /* NUDGE THE AC AND HEALTH TEXT TO THE LEFT */
-    #hp label {
-        padding-right: 4px;
-    }
-
-    #ac_total label {
-        padding-right: 6px;
-    }
 
 
-    /* FIXES BUTTON IN CLASS AND LEVELS WORKSPACE */
-    button.btn.btn-mini.btn-primary.addrow {
-        padding-right: 7px;
-        padding-left: 7px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        margin-left: 11px;
-    }
+/* ---------------------- PRIMARY PAGE ---------------------- */
+/* XP SPEED BOX LENGTH NOW MATCHES THAT OF OTHERS */
+[name="xp_speed"] {
+    margin-left: -7px;
+    width: 54px !important;
+}
+
+span12.th {
+    padding-right: 23px !important;
+}
 
 
-    /* CENTERED TABLE FOR SPELLCASTING */
-    table.span12 {
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
+/* MAKE THE SIZE DROPDOWN BOX FIT IN WITH THE REST OF THE ELEMENTS ACROSS THE TOP OF THE SHEET */
+select.span2 {
+    width: 131px;
+    height: 22px;
+    margin-top: -4px;
+    border-radius: 5px;
+    cursor: pointer !important;
+}
 
 
-    /* HEADING SPACER FOR SPELLCASTING SECTION */
-    h1.span12 {
-        margin-top: 20px;
-        margin-bottom: 7px;
-    }
+/* REMOVE FOCUS INDICATOR FROM SIZE DROPDOWN BOX */
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: thin dotted #3330;
+    outline-offset: -2px;
+}
 
 
-    /* MOVE MOMEMENT AND OTHER LABELS TO THE LEFT TO PREVENT THEM FROM TOUCHING THEIR RESPECTIVE BOXES */
-    #movement .control-label {
-        margin-right: 10px !important;
-        margin-left: -10px !important;
-    }
-
-    #ac_alt .control-label {
-        margin-right: 4px !important;
-        margin-left: -4px !important;
-    }
+/* CURSER SHOULD NO LONGER SHOW RANDOM TEXT SEGMENTS AS CLICKABLE */
+label,
+select {
+    cursor: text !important;
+}
 
 
-    /* CURSER SHOULD NO LONGER SHOW RANDOM TEXT SEGMENTS AS CLICKABLE */
-    label,
-    select {
-        cursor: text !important;
-    }
+/* CAMPAIGN AND EXP LINE LENGTH */
+.character [name="campaign"] {
+    width: 211px;
+}
+
+.character [name="experience"] {
+    width: 51px;
+}
 
 
-    /* XP SPEED BOX LENGTH NOW MATCHES THAT OF OTHERS */
-    [name="xp_speed"] {
-        margin-left: -7px;
-        width: 54px !important;
-    }
+/* FIXES BUTTON IN CLASS AND LEVELS WORKSPACE */
+button.btn.btn-mini.btn-primary.addrow {
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-left: 11px;
+}
 
-    span12.th {
-        padding-right: 23px !important;
-    }
-
-
-    /* SPACING FIX TO CENTER EACH INDIVIDUAL SPELL BOX */
-    [name="spell_lvl_0_known"],
-    [name="spell_lvl_1_known"],
-    [name="spell_lvl_2_known"],
-    [name="spell_lvl_3_known"],
-    [name="spell_lvl_4_known"],
-    [name="spell_lvl_5_known"],
-    [name="spell_lvl_6_known"],
-    [name="spell_lvl_7_known"],
-    [name="spell_lvl_8_known"],
-    [name="spell_lvl_9_known"],
-    [name="spell_lvl_0_bonus_spells"],
-    [name="spell_lvl_1_bonus_spells"],
-    [name="spell_lvl_2_bonus_spells"],
-    [name="spell_lvl_3_bonus_spells"],
-    [name="spell_lvl_4_bonus_spells"],
-    [name="spell_lvl_5_bonus_spells"],
-    [name="spell_lvl_6_bonus_spells"],
-    [name="spell_lvl_7_bonus_spells"],
-    [name="spell_lvl_8_bonus_spells"],
-    [name="spell_lvl_9_bonus_spells"],
-    [name="spell_lvl_0_spells_per_day"],
-    [name="spell_lvl_1_spells_per_day"],
-    [name="spell_lvl_2_spells_per_day"],
-    [name="spell_lvl_3_spells_per_day"],
-    [name="spell_lvl_4_spells_per_day"],
-    [name="spell_lvl_5_spells_per_day"],
-    [name="spell_lvl_6_spells_per_day"],
-    [name="spell_lvl_7_spells_per_day"],
-    [name="spell_lvl_8_spells_per_day"],
-    [name="spell_lvl_9_spells_per_day"],
-    [name="spell_lvl_0_save_dc"],
-    [name="spell_lvl_1_save_dc"],
-    [name="spell_lvl_2_save_dc"],
-    [name="spell_lvl_3_save_dc"],
-    [name="spell_lvl_4_save_dc"],
-    [name="spell_lvl_5_save_dc"],
-    [name="spell_lvl_6_save_dc"],
-    [name="spell_lvl_7_save_dc"],
-    [name="spell_lvl_8_save_dc"],
-    [name="spell_lvl_9_save_dc"] {
-        margin-left: 12px !important;
-    }
+table#abilities thead th,
+table.saves thead th,
+table#init tfoot th,
+table#ac thead th,
+table#ac_alt tfoot th,
+table.attack_bonus thead th {
+    color: rgb(46, 52, 64, 0.8) !important;
+    font-weight: 400 !important;
+    font-size: 10px;
+    margin-left: 25px !important;
+}
 
 
-    /* MOVE SKILL BUTTONS TO THE RIGHT SIDE OF THE COLUMN */
-    a#fillSkills.btn.btn-primary {
-        margin-left: 227px;
-    }
+/* NUDGE THE AC AND HEALTH TEXT TO THE LEFT */
+#hp label {
+    padding-right: 4px;
+}
+
+#ac_total label {
+    padding-right: 6px;
+}
 
 
-    /* MAKE THE SIZE DROPDOWN BOX FIT IN WITH THE REST OF THE ELEMENTS ACROSS THE TOP OF THE SHEET */
-    select.span2 {
-        width: 131px;
-        height: 22px;
-        margin-top: -4px;
-        cursor: pointer !important;
-    }
-
-    /* REMOVE FOCUS INDICATOR FROM SIZE DROPDOWN BOX */
-    select:focus,
-    input[type="file"]:focus,
-    input[type="radio"]:focus,
-    input[type="checkbox"]:focus {
-        outline: thin dotted #3330;
-        outline-offset: -2px;
-    }
-
-    /* FIXES THE SPACING OF AGE, HEIGHT, WIEGHT, ETC. */
-    div#character_page.page [class="control-group"] {
-        margin-left: -12px;
-    }
-
-    div#character_page.page div.controls {
-        margin-left: 0px !important;
-    }
-
-    [name="hair_color"] {
-        width: 190px;
-    }
-
-    [name="eyes_color"] {
-        width: 190px;
-    }
-
-    [name="skin_color"] {
-        width: 190px;
-    }
-
-    [name="weight"] {
-        width: 64px;
-    }
-
-    [name="height"] {
-        width: 64px;
-    }
-
-    [name="age"] {
-        width: 64px;
-    }
-
-    [name="gender"] {
-        width: 64px;
-    }
+/* MIDDLE ALIGN THE AC CALCULATION */
+table#ac {
+    margin-top: 20px !important;
+    margin-bottom: 27px !important;
+}
 
 
-    /* CHARACTER LANGUAGES SECTION SPACING FIXES */
-    div#character_languages.span6 div.span2 {
-        width: 139px !important;
-    }
 
-    div#character_languages.span6 {
-        margin-left: 21px;
-        width: 459px;
-    }
+/* MOVE MOMEMENT AND OTHER LABELS TO THE LEFT TO PREVENT THEM FROM TOUCHING THEIR RESPECTIVE BOXES */
+#movement .control-label {
+    margin-right: 10px !important;
+    margin-left: -10px !important;
+}
 
-    div#character_languages.span6 h1 {
-        margin-top: -4px;
-        margin-bottom: 8px;
-    }
+#ac_alt .control-label {
+    margin-right: 4px !important;
+    margin-left: -4px !important;
+}
 
-    /* CHARACTER DESCRIPTION AND OTHER LARGE TEXT BOTTOM AREAS SPACING FIX */
-    div#character_txt.row input.span6,
-    div#character_txt.row textarea.span6 {
-        width: 438px;
-    }
-    
-    [name="__txt_character_2_name"],
-    [name="__txt_character_2"],
-    [name="__txt_character_4_name"],
-    [name="__txt_character_4"] {
-        margin-left: 1px !important;
-        width: 442px !important;
-    }
-    
-    
-        
-        
-        
-        
-        
-        
+
+/* FIXES JANKY WEAPONS AREA */
+input[placeholder="weapon name"] {
+    margin-bottom: 3px;
+    width: 215px;
+}
+input[placeholder="range"] {
+    width: 66.5px;
+}
+input[placeholder="total attack bonus"] {
+    margin-bottom: 3px;
+    width: 146px;
+}
+input[placeholder="size"] {
+    width: 33.5px;
+}
+input[placeholder="type"] {
+    width: 33.5px !important;
+}
+input[placeholder="crit"] {
+    margin-bottom: 3px;
+}
+input[placeholder="type"] {
+    width: 24px;
+}
+div#weapons.span12 div.weapon {
+    width: 500px;
+}
+
+/* MOVE THE RIGHT SIDE WEAPON BOXES TO THE RIGHT A LITTLE IN ORDER TO MATCH THE PAGE MARGIN */
+[name="wpn4_name"],
+[name="wpn4_special"],
+[name="wpn5_name"],
+[name="wpn5_special"],
+[name="wpn6_name"],
+[name="wpn6_special"] {
+    margin-left: 4px !important;
+}
+
+
+
+
+/* SLIGHTLY SHORTEN THE NAME FIELDS OF ARMOR/PROTECTIVE ITEMS IN ORDER TO ADHERE TO THE PAGE MARGINS */
+[name="protect_3_name"],
+[name="protect_4_name"] {
+    width: 191.5px !important;
+}
+
+[name="protect_1_name"],
+[name="protect_2_name"] {
+    width: 191.5px !important;
+}
+
+div#armor.span12 {
+    width: 1000px !important;
+}
+
+div#armor.span12 div.span6:nth-of-type(2) {
+    margin-left: 23.5px !important;
+}
+
+/* CHECKBOXES */
+input[name="caster"] {
+    margin-top: 0px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+}
+
+input.skill_prof {
+    margin-bottom: 3px
+}
+
+.character .control-group[class="span2 control-group"] {
+    width: 141px;
+}
+
+div#armor.span12 input.input-nano[name="protect_2_worn"],
+div#armor.span12 input.input-nano[name="protect_4_worn"] {
+    margin-left: 6px;
+    margin-bottom: 3px;
+}
+
+div#armor.span12 input.input-nano[name="protect_1_worn"],
+div#armor.span12 input.input-nano[name="protect_3_worn"] {
+    margin-left: 6px;
+    margin-bottom: 4px;
+}
+
+
+/* MAKE FEATS HEADER LINE OF MORE NICELY WITH THE CONTENT BELOW IT*/
+div#feats.character.span12 h1 {
+    margin-bottom: -3px !important;
+}
+
+/* MAKE THE FEAT SLOTS MATCH THE MARGINS OF THE PAGE */
+div#feats.character.span12 {
+    width: 1000px;
+}
+
+div#feats.character.span12 div.span3:nth-of-type(2),
+div#feats.character.span12 div.span3:nth-of-type(3),
+div#feats.character.span12 div.span3:nth-of-type(4) {
+    margin-left: 22px;
+}
+
+
+/* HIDE THE FEAT SLOTS THAT ARE TOO CLOSE TO THE BOTTOM OF THE PAGE */
+[name="feat_18"],
+[name="feat_36"],
+[name="feat_54"],
+[name="feat_72"] {
+    border-color: transparent !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------- SKILLS AND EQUIPMENT PAGE ---------------------- */
+/* --- SKILLS BUTTON PLACEMENTS START --- */
+a#fillSkills.btn.btn-primary {
+    margin-left: 233px;
+}
+
+a#fillSkills.btn.btn-primary {
+    margin-bottom: 9px
+}
+a#clearSkills.btn.btn-danger {
+    margin-bottom: 9px
+}
+/* --- SKILLS BUTTON PLACEMENTS END --- */
+/* EQUIPMENT LINE SPACING TO MATCH PAGE MARGINS */
+div#possessions.character input.span4 {
+    width: 297px;
+}
+
+
+/* ALIGNING EQUIPMENT TABLE TO CORRECT CENTER */
+div#possessions.character {
+    margin-left: 3px;
+    width: 438px;
+}
+/* ALIGNING SKILL TABLE TO CORRECT CENTER */
+[class="span2 skill_name"] {
+    width: 132px !important;
+}
+
+
+
+/* FIXES SOME JANKY SPACING AT THE FOOTERS OF TABLES */
+tfoot tr th {
+    border-top: 3px solid #61414300;
+    font-weight: 100 !important;
+    color: transparent !important;
+    /* Hides the text that, on further consideration, was unnecessary. */
+}
+
+
+/* ALIGNS BOTTOM OF SKILLS TABLE WITH OTHER PAGE ELEMENTS */
+div#skills.span6.character h1 {
+    margin-bottom: -5.5px;
+    margin-top: 1.5px !important;
+}
+
+
+/* ---- WEIGHT SUBSECTION START ---- */
+/* ALTERS THE SPACING OF WEIGHT BOXES TO CLOSER MATCH THE SIZE OF THE TEXT */
+div#load.form-vertical.span3 input.input-micro {
+    height: 11px;
+    margin-left: 0.5px;
+    text-align: right;
+    border-radius: 5px;
+}
+
+#load .controls {
+    margin-left: 3.5px !important;
+    width: 66px;
+}
+
+div#load.form-vertical.span3 {
+    margin-top: -3px;
+    margin-left: 21
+}
+
+[name="currency"] {
+    height: 52.5px !important;
+    width: 207px !important;
+    margin-left: 3px !important;
+}
+
+div#currency.span3 #text {
+    margin-left 22px;
+}
+
+#load .control-label {
+    color: rgb(46, 52, 64, 0.8) !important;
+    font-weight: 400 !important;
+    font-size: 10px;
+    margin-bottom: -2px !important;
+    margin-left: 5px;
+}
+
+/* ---- WEIGHT SUBSECTION END ---- */
+/* ---------------------- SPELL PAGE ---------------------- */
+/* CORRECTLY CENTER SPELL LISTS */
+div#spells_powers.row.character {
+    width: 980px;
+    margin-left: 2px;
+}
+
+div#spell_levels.row {
+    margin-left: 0px;
+}
+
+/* CENTERED TABLE FOR SPELLCASTING */
+table.span12 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* HEADING SPACER FOR SPELLCASTING SECTION */
+h1.span12 {
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
+
+/* SPACING FIX TO CENTER EACH INDIVIDUAL SPELL BOX */
+[name="spell_lvl_0_known"],
+[name="spell_lvl_1_known"],
+[name="spell_lvl_2_known"],
+[name="spell_lvl_3_known"],
+[name="spell_lvl_4_known"],
+[name="spell_lvl_5_known"],
+[name="spell_lvl_6_known"],
+[name="spell_lvl_7_known"],
+[name="spell_lvl_8_known"],
+[name="spell_lvl_9_known"],
+[name="spell_lvl_0_bonus_spells"],
+[name="spell_lvl_1_bonus_spells"],
+[name="spell_lvl_2_bonus_spells"],
+[name="spell_lvl_3_bonus_spells"],
+[name="spell_lvl_4_bonus_spells"],
+[name="spell_lvl_5_bonus_spells"],
+[name="spell_lvl_6_bonus_spells"],
+[name="spell_lvl_7_bonus_spells"],
+[name="spell_lvl_8_bonus_spells"],
+[name="spell_lvl_9_bonus_spells"],
+[name="spell_lvl_0_spells_per_day"],
+[name="spell_lvl_1_spells_per_day"],
+[name="spell_lvl_2_spells_per_day"],
+[name="spell_lvl_3_spells_per_day"],
+[name="spell_lvl_4_spells_per_day"],
+[name="spell_lvl_5_spells_per_day"],
+[name="spell_lvl_6_spells_per_day"],
+[name="spell_lvl_7_spells_per_day"],
+[name="spell_lvl_8_spells_per_day"],
+[name="spell_lvl_9_spells_per_day"],
+[name="spell_lvl_0_save_dc"],
+[name="spell_lvl_1_save_dc"],
+[name="spell_lvl_2_save_dc"],
+[name="spell_lvl_3_save_dc"],
+[name="spell_lvl_4_save_dc"],
+[name="spell_lvl_5_save_dc"],
+[name="spell_lvl_6_save_dc"],
+[name="spell_lvl_7_save_dc"],
+[name="spell_lvl_8_save_dc"],
+[name="spell_lvl_9_save_dc"] {
+    margin-left: 12px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------- CHARACTER PAGE ---------------------- */
+/* ---- CHARACTER LANGUAGES SUBSECTION START ---- */
+/* SPACING FIXES */
+div#character_languages.span6 div.span2 {
+    width: 140.5px !important;
+}
+
+div#character_languages.span6 {
+    margin-left: 24px;
+    width: 470px;
+}
+
+div#character_languages.span6 h1 {
+    margin-top: -4px;
+    margin-left: -1px;
+    margin-bottom: 8px;
+}
+
+div#character_page.page div.row:first-child {
+    width: 1000px;
+}
+
+
+/* ---- CHARACTER LANGUAGES SUBSECTION END ---- */
+/* FIXES THE SPACING OF AGE, HEIGHT, WIEGHT, ETC. */
+div#character_page.page div.row div.span4 div.character.row {
+    width: 345px !important;
+}
+
+div#character_page.page div.row div.span4 div.character.row div.span2:nth-of-type(1),
+div#character_page.page div.row div.span4 div.character.row div.span2:nth-of-type(3) {
+    margin-right: 6px !important;
+}
+
+
+div#character_page.page [class="control-group"] {
+    margin-left: -12px;
+}
+
+div#character_page.page div.span4 div.character.row {
+    width: 320px;
+}
+
+div#character_page.page div.controls {
+    margin-left: 0px !important;
+}
+
+[name="hair_color"] {
+    width: 198.5px;
+}
+
+[name="eyes_color"] {
+    width: 198.5px;
+}
+
+[name="skin_color"] {
+    width: 198.5px;
+}
+
+[name="weight"] {
+    width: 66px;
+}
+
+[name="height"] {
+    width: 66px;
+}
+
+[name="age"] {
+    width: 66px;
+}
+
+[name="gender"] {
+    width: 66px;
+}
+
+
+/* CHARACTER DESCRIPTION AND OTHER LARGE BOTTOM TEXT AREA SPACING FIXS */
+div#character_txt.row input.span6,
+div#character_txt.row textarea.span6 {
+    width: 446px;
+}
+/* This one changes the blocks on the left side */
+[name="__txt_character_2_name"],
+[name="__txt_character_2"],
+[name="__txt_character_4_name"],
+[name="__txt_character_4"] {
+    margin-left: 4px !important;
+    width: 446px !important;
+}
+/* This one changes the blocks on the right side */
+/* ADJUST HEIGHTs AND WIDTHS OF BIG BOTTOM TEXT FIELDS */
+#character_statblock textarea,
+#character_other_notes textarea,
+#character_private_notes textarea {
+    height: 141px;
+    width: 930px;
+}
+
+
+/* FONT SIZE FOR PLEACEHOLDER HEADERS IN CHARACTER DETAILS SECTION */
+#character_txt input[type="text"] {
+    font-size: 16px;
+}
+
 }
