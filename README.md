@@ -16,3 +16,6 @@ A userstyle for Mythweavers character sheets, based on the Nord color palette.
   <br/>
   <img src="Screenshots/Screenshot|09-07-22|11.png" width="100%" style="max-width: 100%;"/>
 </p>
+
+## To Do
+Find a way to align the background fade to the image instead of the whole page. As it currently is, unchecking the caster checkbox changes the length of the page, on account of removing the spellcasting section, and messes up the gradiant. 
