@@ -4,8 +4,8 @@
 @homepageURL    https://github.com/AnthemV/Nordic-Myth-Weavers
 @supportURL     https://github.com/AnthemV/Nordic-Myth-Weavers/issues
 @updateURL      https://github.com/AnthemV/Nordic-Myth-Weavers/raw/main/Nordic-Myth-Weavers-Sheets.user.styl
-@version        1.6.0
-@description    An alternate color palate for Myth-Weavers character sheets, based on the Nord color palette.
+@version        1.7.0
+@description    An alternate color palette for Myth-Weavers character sheets, based on the Nord color palette.
 @author         Ian Crawford
 @license        MIT
 ==/UserStyle== */
@@ -13,21 +13,43 @@
 
 @-moz-document domain("www.myth-weavers.com") {
 
+
+    /* --------------------- CUSTOMISATION --------------------- */
+    :root {
+        --accent-color: #5619583d;
+        /* Accent color for page box shadow */
+        --background-image: url(https://miaomiaolove.github.io/images/05.jpg);
+        /* The picture in the background of the sheet */
+    }
+
+    body {
+        background-image: var(--caster);
+        /* Set to "--caster" or "--not-caster" (without the quotes). This adjusts the fade out of backgound image to fit the page length */
+    }
+
+
+
+
+
+
+    /* CASTER VS NON-CASTER BACKGROUND GRANDIANT */
+    :root {
+        --caster: linear-gradient(to bottom, rgba(255, 153, 153, 0) 2%, #2e3440 12%), var(--background-image);
+        --not-caster: linear-gradient(to bottom, rgba(253, 153, 255, 0) 2%, #2e3440 16%), var(--background-image);
+    }
+
+
+
+
     /* ---- BACKGROUND AND SITE FONT ---- */
     body {
         padding-top: 100px;
         background-color: #2e3440;
         font-family: rubik !important;
         color: #2e3440;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(255, 153, 153, 0) 5%, #2e3440 14%), url(https://miaomiaolove.github.io/images/05.jpg);
-        /* Add your background image here! */
         background-position: top center;
         background-repeat: no-repeat;
         background-size: 100% auto;
-
-
-        /*background-image: url("https://miaomiaolove.github.io/images/05.jpg");
-        -webkit-mask-image: linear-gradient(180deg, #000 90%, transparent);*/
     }
 
     input,
@@ -80,6 +102,12 @@
         border-width: 0 0 0px;
     }
 
+
+    /* SHADOW BELOW HEADER PAGE BAR */
+    .navbar-fixed-top {
+        box-shadow: 0px 0px 16px #1c222db0;
+    }
+
     .navbar-inner {
         min-height: 0px;
         background-image: linear-gradient(to bottom, #3b4252, #3b4252);
@@ -94,7 +122,8 @@
     .page {
         background-color: #f6f7f9;
         border-radius: 16px;
-        box-shadow: 0px 0px 40px #5619583d;
+        box-shadow: 0px 0px 40px var(--accent-color);
+        margin-top: 30px;
     }
 
     .navbar .nav > li > a {
@@ -186,13 +215,31 @@
         -moz-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0), 0 1px 2px rgba(0, 0, 0, 0.05);
         box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0), 0 1px 2px rgba(0, 0, 0, 0.05);
     }
-    input,
-    button,
-    select,
-    textarea {
 
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* sheets.css | https://www.myth-weavers.com/assets/css/sheets.css?_=1499962733 */
+    .btn-danger {
+        /* color: #fff; */
+        /* background-color: #da4e49; */
+        /* background-image: linear-gradient(to bottom, #ee5f5b, #bd362f); */
+        /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEE5F5B', endColorstr='#FFBD362F', GradientType=0); */
+        color: #eceff4;
+        background-color: #e93e6f;
+        background-image: linear-gradient(to bottom, #e93e6f, #e93e6f);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#FFEE5F5B', endColorstr='#FFBD362F', GradientType=0);
     }
+
+    .btn-danger:hover,
+    .btn-danger:active,
+    .btn-danger.active,
+    .btn-danger.disabled,
+    .btn-danger[disabled] {
+        /* background-color: #bd362f; */
+        background-color: #eb3f6f;
+    }
+
+
+
     label,
     input,
     button,
@@ -280,7 +327,7 @@
 
     button.btn,
     input[type="submit"].btn {
-        padding-top: 6px;
+        padding-top: 4px;
         *padding-bottom: 3px;
     }
 
@@ -298,6 +345,10 @@
     /* ADDS GAP TO THE SIDE OF THE SAVE BUTTON */
     button.sheetsave.btn.btn-primary {
         margin-left: 12px;
+    }
+
+    .sheetsave {
+        margin-top: 7px;
     }
 
     select,
@@ -452,7 +503,4 @@
     } 
     
     */
-
-    
-    
 }
