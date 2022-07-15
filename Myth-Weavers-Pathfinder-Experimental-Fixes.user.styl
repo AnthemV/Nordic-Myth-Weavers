@@ -4,7 +4,7 @@
 @homepageURL    https://github.com/AnthemV/Nordic-Myth-Weavers
 @supportURL     https://github.com/AnthemV/Nordic-Myth-Weavers/issues
 @updateURL      https://github.com/AnthemV/Nordic-Myth-Weavers/raw/main/Myth-Weavers-Pathfinder-Experimental-Fixes.user.styl
-@version        1.4.0
+@version        1.5.0
 @description    Spacing fixes for Myth-Weavers's experimental Pathfinder character sheet.
 @author         Ian Crawford
 @license        MIT
@@ -53,11 +53,6 @@
 
     /* ---------------------- PRIMARY PAGE ---------------------- */
     /* XP SPEED BOX LENGTH NOW MATCHES THAT OF OTHERS */
-    div.span2:nth-child(10) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1) {
-        width: 56px;
-        margin-left: -7px;
-    }
-
     div.span2:nth-child(10) > div:nth-child(1) {
         margin-left: -3px;
     }
@@ -95,10 +90,7 @@
     }
 
 
-    /* MOVE EXPERIENCE LABEL TO THE LEFT */
-    div.span2:nth-child(8) > div:nth-child(1) {
-        margin-left: -5px;
-    }
+
 
     /* CAMPAIGN AND EXP LINE LENGTH */
     .character [name="campaign"] {
@@ -400,6 +392,70 @@
     [name="feat_72"] {
         border-color: transparent !important;
     }
+
+    /* LOTS OF CHANGES I MADE AFTER REALIZING UBLOCK ORIGIN WAS MESSING UP MY PAGE, AND THAT THE DEFAULT WAS ACTUALLY JANKY */
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    div.span2:nth-child(9) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1) {
+        width: 56px;
+    }
+
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    div.span2:nth-child(9) > div:nth-child(1) {
+        margin-left: -10px;
+    }
+
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    div.span2:nth-child(10) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1) {
+        width: 56px;
+    }
+
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    div.span2:nth-child(11) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1) {
+        width: 56px;
+    }
+
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    div.span2:nth-child(11) > div:nth-child(1) {
+        margin-left: -10px;
+    }
+
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    div.span2:nth-child(7) > div:nth-child(1) {
+        margin-left: -5px;
+    }
+
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    div.span2:nth-child(6) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1) {
+        margin-left: -33px;
+        width: 79.5px;
+    }
+
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    #init > tbody:nth-child(2) > tr:nth-child(1) > th:nth-child(1) {
+        padding-left: 3.25px;
+        padding-right: 3.25px;
+    }
+
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    #init {
+        padding-left: 55px;
+    }
+
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    div.span5:nth-child(6) > div:nth-child(1) > div:nth-child(1) {
+        padding-left: 52px;
+        padding-top: 35px;
+    }
+
+    /* Element | https://www.myth-weavers.com/sheet.html#id=2664020 */
+    div.page:nth-child(1) > div:nth-child(1) {
+        width: 1000px;
+    }
+
+    div.span5:nth-child(6) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1) {
+        margin-left: 6px;
+    }
+
 
 
 
