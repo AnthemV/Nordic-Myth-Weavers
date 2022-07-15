@@ -21,4 +21,4 @@ A userstyle for Mythweavers character sheets, based on the Nord color palette.
 You can change the default background by editing the Nordic Myth-Weavers Sheets style. The option is at the top, just under the customization header. It accepts any image url. Be aware that tmages with a wider aspect ratio than 16:9 may have issues with the fade out effect ending too early.
 
 ## Firefox Settings
-To enable the blur region behind the page header bar, set ```layout.css.backdrop-filter.enabled```and ```gfx.webrender.all``` to ```true``` in about:config.
+To enable the blur region behind the page header bar, set ```layout.css.backdrop-filter.enabled``` and ```gfx.webrender.all``` to ```true``` in about:config.
