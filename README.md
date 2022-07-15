@@ -8,7 +8,7 @@ A userstyle for Mythweavers character sheets, based on the Nord color palette.
   </a>
  </p>
  
-## Pathfinder Experimental Spacing Fixes
+## Pathfinder [Experimental] Spacing Fixes
 <p align="left">
   <a target="_blank" rel="noopener noreferrer" href="https://github.com/AnthemV/Nordic-Myth-Weavers/raw/main/Myth-Weavers-Pathfinder-Experimental-Fixes.user.styl">
     <img src="https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=flat"/>
