@@ -9,6 +9,8 @@
 @author         Ian Crawford
 @license        MIT
 ==/UserStyle== */
+
+
 @-moz-document domain("www.myth-weavers.com") {
 
 
@@ -108,13 +110,25 @@
 
     .navbar-inner {
         min-height: 0px;
-        background-image: linear-gradient(to bottom, #3b4252, #3b4252);
+        background-image: linear-gradient(to bottom, #3b4252db, #3b4252db);
+        backdrop-filter: blur(10px);
         background-repeat: repeat-x;
-        border: 0px solid #d4d4d4;
+        border: 0px solid #d4d4d400;
         border-top-width: 0px;
         border-right-width: 0px;
         border-bottom-width: 0px;
         border-left-width: 0px;
+    }
+
+    .navbar {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-color: #434c5e;
+    }
+
+    .navbar-fixed-top .navbar-inner,
+    .navbar-fixed-bottom .navbar-inner {
+        background-color: #0ff0;
     }
 
     .page {
